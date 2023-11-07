@@ -6,7 +6,7 @@ metadata:
   labels:
     app: demo-kubernetes-frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: demo-kubernetes-frontend
