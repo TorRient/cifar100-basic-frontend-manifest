@@ -6,5 +6,4 @@ patches:
     kind: Deployment
 namespace: demo-kubernetes-dev
 resources:
-- ./namespace.yaml
 - ../../base
