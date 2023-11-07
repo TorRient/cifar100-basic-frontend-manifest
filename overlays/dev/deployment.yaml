@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-kubernetes-frontend
+  namespace: demo-kubernetes-dev
   labels:
     app: demo-kubernetes-frontend
 spec:
