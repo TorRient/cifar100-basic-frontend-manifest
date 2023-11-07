@@ -2,5 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-kubernetes-frontend
+  labels:
+    app: demo-kubernetes-frontend
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: demo-kubernetes-frontend
+  template:
+    metadata:
+      labels:
+        app: demo-kubernetes-frontend
+    spec:
+      containers:
+      - name: demo-kubernetes-frontend
+        image: torrient/demo-kubernetes-frontend:v1
