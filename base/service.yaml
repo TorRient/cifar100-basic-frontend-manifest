@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-kubernetes-frontend-service
+  labels:
+    app: demo-kubernetes-frontend
+spec:
+  ports:
+  - port: 8501
+    protocol: TCP
+    targetPort: 8501
+    nodePort: 31199
+  selector:
+    app: demo-kubernetes-frontend
+  type: NodePort
