@@ -4,6 +4,9 @@ patches:
 - path: deployment.yaml
   target:
     kind: Deployment
+- path: service.yaml
+  target:
+    kind: Service
 namespace: demo-kubernetes-prod
 resources:
 - ../../base
