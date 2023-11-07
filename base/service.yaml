@@ -9,7 +9,6 @@ spec:
   - port: 8501
     protocol: TCP
     targetPort: 8501
-    nodePort: 31199
   selector:
     app: demo-kubernetes-frontend
-  type: NodePort
+  type: ClusterIP
