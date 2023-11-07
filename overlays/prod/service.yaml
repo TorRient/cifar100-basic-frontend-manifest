@@ -2,6 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: demo-kubernetes-frontend-service
-  namespace: demo-kubernetes-prod
   labels:
     app: demo-kubernetes-frontend
+spec:
+  ports:
+  - port: 8501
+    protocol: TCP
+    targetPort: 8501
+  selector:
+    app: demo-kubernetes-frontend
+  type: ClusterIP
